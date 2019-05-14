@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue Example</title>
+        <style>
+            /* side-by-side grid */
+            .box_left {
+                color: #FFF;
+                height: 420px;
+                width: 580px;
+                margin-left: 10px;
+                margin-right: 10px;
+                float: left;
+                background-color: #000080;
+            }
+            .box_wrap {
+                width: 1200px;
+                height: auto;
+                border: 1px solid #ffffff;
+            }
+            .clearfix:after {
+                display: block;
+                clear: both;
+                content: "";
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="https://github.com/TonyGermaneri/canvas-datagrid/blob/master/tutorials/vueExample.html">original html</li>
+            <li><a href="https://github.com/TonyGermaneri/canvas-datagrid/blob/master/tutorials/vueExample.js">original js</li>
+        </ul>
+        <div id="app">
+            <div class="clearfix box_wrap">
+                <div class="box_left" id='parent_grid'>copy source
+                    <canvas-datagrid v-bind.prop="grid"></canvas-datagrid>
+                </div>
+                <div class="box_left" id='parent_grid2'>copy destination
+                    <canvas-datagrid v-bind.prop="grid2"></canvas-datagrid>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div id="app">
+            <table width="100%">
+                <tr>
+                    <td width="100" height="50" bgcolor="#ffff00" id="parent_grid">
+                        <canvas-datagrid v-bind.prop="grid"></canvas-datagrid>
+                    </td>
+                    <td width="50%" height="50" bgcolor="#00ff00" id="parent_grid2">
+                        <canvas-datagrid v-bind.prop="grid2"></canvas-datagrid>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        -->
+<!--    <script src="../dist/canvas-datagrid.debug.js"></script>-->
+        <script src="node_modules/canvas-datagrid/dist/canvas-datagrid.debug.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script type="text/javascript" src="./vueExample.js"></script>
+    </body>
+</html>
