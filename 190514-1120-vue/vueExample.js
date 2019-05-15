@@ -25,13 +25,13 @@ new Vue({
             // left one
             this.grid = canvasDatagrid({
                 parentNode: document.getElementById('parent_grid'),
-                columnHeaderClickBehavior: 'select',  // sortやめる
+                columnHeaderClickBehavior: 'select',  // suppress sort
                 debug: false,
             });
             this.grid.data = this.createGridData(10, 10);
             this.grid.style.height = "400px";
             //this.grid.scrollHeight = "200px";
-            this.grid.style.width  = "580px";
+            this.grid.style.width  = "560px";
             // right one
             this.grid2 = canvasDatagrid({
                 parentNode: document.getElementById('parent_grid2'),
@@ -39,7 +39,7 @@ new Vue({
             });
             this.grid2.data = this.createGridData(25, 8);
             this.grid2.style.height = "400px";
-            this.grid2.style.width  = "580px";
+            this.grid2.style.width  = "560px";
         }
     },
     created: function() {
@@ -53,8 +53,8 @@ new Vue({
     mounted: function() {
         console.log("mounted, start.");
         this.initGrid();
-        this.grid.height='400px';
-        this.grid.style.height='400px';
+        this.grid.resize();
+        this.grid2.resize();
 //        this.grid2.height='400px';
 //        this.grid2.style.height='400px';
 //        this.grid.draw();
