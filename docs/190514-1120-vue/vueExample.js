@@ -53,21 +53,7 @@ new Vue({
     mounted: function() {
         console.log("mounted, start.");
         this.initGrid();
-        this.grid.resize();
-        this.grid2.resize();
-//        this.grid2.height='400px';
-//        this.grid2.style.height='400px';
-//        this.grid.draw();
-//        this.grid2.draw();
-        console.log('grid(1) scroll color ' + this.grid.style.debugScrollHeightColor);
-        console.log('grid(1) height       ' + this.grid.height);
-        console.log('grid(1) height       ' + this.grid.style.height);
-        console.log('grid(1) scrollHeight ' + this.grid.scrollHeight);
-        console.log('grid(2) scroll color ' + this.grid2.style.debugScrollHeightColor);
-        console.log('grid(2) height       ' + this.grid2.height);
-        console.log('grid(2) height       ' + this.grid2.style.height);
-        console.log('grid(2) scrollHeight ' + this.grid2.scrollHeight);
-        console.log('grid(2) border width ' + this.grid2.scrollBarBorderWidth);
-        console.log("mounted, done.");
+//        this.grid.resize();
+//        this.grid2.resize();
     }
 });
